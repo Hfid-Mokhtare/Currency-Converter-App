@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">My Application 3</string>
+    <string name="corancy_converter" translatable="false">Currency Converter</string>
+    <string name="from" translatable="false">From</string>
+    <string name="select_country" translatable="false">select country</string>
+    <string name="select_country2" translatable="false">Moroccan Dirham</string>
+    <string name="email">"@gmail.com"</string>
+    <string name="to" translatable="false">To</string>
+    <string name="amounte" translatable="false">Amounte</string>
+    <string name="converted_amount" translatable="false">converted amount</string>
+    <string name="result" translatable="false">Result</string>
+    <string name="convert" translatable="false">CONVERT</string>
+</resources>

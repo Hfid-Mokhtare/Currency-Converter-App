@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:text="@string/corancy_converter"
+        android:textColor="@color/porpule"
+        android:textSize="42sp"
+
+        app:layout_constraintEnd_toStartOf="@id/G4"
+        app:layout_constraintStart_toStartOf="@id/G3"
+        app:layout_constraintTop_toTopOf="@id/G1"
+        />
+
+
+    <TextView
+        android:id="@+id/from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/from"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/G3"
+
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/from_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/G3"
+        app:layout_constraintTop_toBottomOf="@id/from"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:hint="@string/select_country"
+        >
+
+        <AutoCompleteTextView
+            android:id="@+id/from_auto_complete_text_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/to"
+        android:textStyle="bold"
+
+
+        app:layout_constraintStart_toStartOf="@+id/G3"
+        app:layout_constraintTop_toBottomOf="@+id/from_input_layout" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/to_input_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/G3"
+        app:layout_constraintTop_toBottomOf="@id/to"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:hint="@string/select_country"
+        >
+
+    <AutoCompleteTextView
+        android:id="@+id/to_auto_complete_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:inputType="none"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/amounte"
+        android:textStyle="bold"
+
+
+        app:layout_constraintStart_toStartOf="@+id/G3"
+        app:layout_constraintTop_toBottomOf="@+id/to_input_layout" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/G3"
+        app:layout_constraintTop_toBottomOf="@id/amount"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/amounte"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/amounte_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="number"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <Button
+        android:id="@+id/convert_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/convert"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/input_layout3"
+        app:backgroundTint="@color/porpule"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/result"
+        android:textColor="@color/red"
+
+
+        app:layout_constraintStart_toStartOf="@+id/G3"
+        app:layout_constraintTop_toBottomOf="@+id/convert_btn" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/input_layout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/G3"
+        app:layout_constraintTop_toBottomOf="@id/result"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/converted_amount"
+        app:suffixText="\tDH"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/result_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:enabled="false"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/G1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/G2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.9"
+        android:orientation="horizontal"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/G3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/G4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.6" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

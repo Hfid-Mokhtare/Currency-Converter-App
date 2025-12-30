@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Application 3</string>
+    <string name="to">إلى</string>
+    <string name="amounte">السعر</string>
+    <string name="converted_amount">السعر بعد التحويل</string>
+    <string name="result">التحويل</string>
+    <string name="corancy_converter">محول العملات</string>
+    <string name="from">من</string>
+    <string name="select_country">إختر العملة</string>
+    <string name="select_country2">الدرهم المغربي</string>
+    <string name="convert">تحويل</string>
+</resources>
